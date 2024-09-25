@@ -9,20 +9,6 @@ output = subprocess.check_output('awk -F: \'$3 >= 1000 && $1 != "nobody" { print
 users = output.splitlines()
 print(users)
 blocked_users = []
-# for i in users:
-
-#   command = f'sudo -S passwd -S {i}'
-#  process = pexpect.spawn(command,timeout=5)
-# process.expect(pexpect.EOF)
-# output = process.before.decode('utf-8')
-#  status = output.splitlines()
-# print(status)
-# first_line = status[0]
-# parts = first_line.split()
-# status_flag = parts[1]
-# if status_flag == 'L':
-# blocked_users.append(i)
-
 
 print(len(users))
 print(float(len(users) / 4))
